@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body id="body-contact">
+    <a href="/index.html"><i class="fa-solid fa-arrow-left" id="arrow-left"></i></a>
+    <div class="contact">
+        <h1>Quick Contact</h1>
+        <!-- Inside the onsubmit attribue a function sendEmail() , it calls the function from external contact.js file ,
+        reset() will reset or clear the form data as we submit the form 
+         and return false is used to prevent the default behavior of the form-->
+        <form class="input-txt" onsubmit="sendEmail(); reset(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" name="" id="email" placeholder="Email id" required>
+        <input type="text" name="" id="phone" placeholder="Phone no" required>
+        <textarea name="" id="textarea" cols="30" rows="10" placeholder="How can we help you"></textarea>
+        <button type="submit" id="button">Submit</button>
+    </form>
+    </div>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script src="contact.js"></script>
+  
+</body>
+
